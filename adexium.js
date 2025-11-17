@@ -1,6 +1,6 @@
 const tg = window.Telegram.WebApp;
-tg.expand();                                    // full-screen
-const uid = tg.initDataUnsafe?.user?.id || 1;   // Telegram user id
+tg.expand();                                      // fullscreen
+const uid = tg.initDataUnsafe?.user?.id || 1;     // Telegram user id
 
 function getCount(){ return Number(localStorage.getItem(`cnt_${uid}`)||0)}
 function setCount(n){ localStorage.setItem(`cnt_${uid}`,n); showCount()}
@@ -9,5 +9,5 @@ showCount();
 
 function adFinished(){
   setCount(getCount()+1);
-  // TODO: swap localStorage with Firebase call here
+  // TODO: replace with Firebase call if you want server-side storage
 }
